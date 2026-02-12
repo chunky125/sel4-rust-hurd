@@ -10,9 +10,9 @@
 #
 
 [package]
-name = "sel4-kernel-loader-add-payload"
+name = "rust-laden-add-payload"
 version = "0.1.0"
-authors = ["Nick Spinale <nick.spinale@coliasgroup.com>"]
+authors = ["Nick Spinale <nick.spinale@coliasgroup.com>, Chris Plant <chris@monkeyircd.org>"]
 edition = "2024"
 license = "BSD-2-Clause"
 
@@ -23,9 +23,9 @@ heapless = "0.9.1"
 num = "0.4.3"
 object = { version = "0.37.3", features = ["all"] }
 postcard = { version = "1.1.3", default-features = false, features = ["alloc"] }
-sel4-config-types = { path = "../../sel4/config/types", features = ["serde"] }
-sel4-kernel-loader-payload-types = { path = "../payload-types", features = ["serde"] }
-sel4-synthetic-elf = { path = "../../sel4-synthetic-elf" }
+sel4-config-types = { git = "https://github.com/seL4/rust-sel4", rev = "2c9786744900433f37e803c25ab208835a802cf3", features = ["serde"] }
+sel4-kernel-loader-payload-types = { git = "https://github.com/seL4/rust-sel4", rev = "2c9786744900433f37e803c25ab208835a802cf3", features = ["serde"] }
+sel4-synthetic-elf = { git = "https://github.com/seL4/rust-sel4", rev = "2c9786744900433f37e803c25ab208835a802cf3" }
 serde = { version = "1.0.228", default-features = false, features = ["alloc", "derive"] }
 serde_json = "1.0.145"
 serde_yaml = "0.9.34"
